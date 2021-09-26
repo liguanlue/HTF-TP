@@ -69,7 +69,7 @@ class HGTLayer(nn.Module):
         self.use_norm = use_norm
         print('use_norm = {}'.format(use_norm))
 
-        for t in range(self.num_types):      #每个type的节点有一个编码器
+        for t in range(self.num_types):      #Each type of node has an encoder
             self.k_linears.append(nn.Linear(self.in_dim, self.out_dim))
             self.q_linears.append(nn.Linear(self.in_dim, self.out_dim))
             self.v_linears.append(nn.Linear(self.in_dim, self.out_dim))
