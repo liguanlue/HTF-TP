@@ -121,11 +121,11 @@ def get_scene(scene_dir):
         number = -1
         h, w = labels.shape
         for i in range(1, connectedComponents_num):
-            if stats[i, 4] >= 500:  # 面积大于500的连通域
+            if stats[i, 4] >= 500:  # Connected domains with an area greater than 500
                 number += 1
                 temp_img = cv2.inRange(labels, i, i)
                 # single_scene_img.append(temp_img)
-                id_class.append(id)  # 【场景id，将path合并后的id】
+                id_class.append(id)  # 【Scene id, id after merging path】
                 where = temp_img // 255 * len(id_class)
                 labels_scene = labels_scene + where
                 num = 0
