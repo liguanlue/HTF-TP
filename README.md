@@ -6,22 +6,22 @@ The implemention of paper "Trajectory Prediction with Heterogeneous Graph Neural
 ### Processing data
 Please donwload the raw datasets and run the following command to process data
 
-'''
+```
 python utils/data_process.py
-'''
+```
 
 ### Training
 Run the following command to train our model
 
-'''
+```
 python scripts/training_loop.py
-'''
+```
 
 ### Evaluation
 Run the following command to evaluate the performance
 
-'''
+```
 python scripts/test_pretrained_model.py
-'''
+```
 
 
